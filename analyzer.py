@@ -1,8 +1,10 @@
 import csv
+import os
 
 def read_students(file_path):
     students = []
 
+    os.makedirs("reports",exist_ok=True)
     with open(file_path, mode="r") as file:
         reader = csv.DictReader(file)
 
